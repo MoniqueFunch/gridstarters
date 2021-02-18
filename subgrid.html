@@ -9,21 +9,27 @@
             margin: 0;
         }
 
-        .container {}
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 100px 1fr 70px;
+        }
 
         .item {
-            border: 1px solid #F00;
+            border: 1px solid grey;
         }
 
         .item-a {
-            grid-column: span 4;
-            grid-row: span 1;
             background-color: darkgoldenrod;
         }
 
         .item-b {
-            background-color: #91bd6b;
 
+            background-color: #91bd6b;
+            padding: 10px;
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
 
         .item-d {
@@ -31,8 +37,10 @@
         }
 
 
+
         article {
             border: 1px solid #333;
+            background-color: skyblue;
         }
 
         @media screen and (min-width:768px) {}
